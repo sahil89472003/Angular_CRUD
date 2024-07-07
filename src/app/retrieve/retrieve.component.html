@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <button class="show-button" (click)="getEmp()">Show</button>
+        <table class="student-table">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Salary</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <!-- *ngFor="let s1 of empdata" -->
+            <tr *ngFor="let e1 of employeedata">
+                <td>{{e1.id}}</td>
+                <td>{{e1.name}}</td>
+                <td>{{e1.desig}}</td>
+                <td>{{e1.salary}}</td>
+                <td><button class="edit-button" (click)="updateemp(e1.id)">Edit</button></td>
+                <td><button class="delete-button" (click)="delemp(e1.id)">Delete</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

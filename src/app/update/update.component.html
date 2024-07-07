@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Insert Data Here</h1>
+        <form #updateForm="ngForm" (ngSubmit)="update(updateForm)">
+            <label for="name">Emp Name:</label>
+            <input type="text" id="name" name="name" [(ngModel)]="employeedata.name" /><br />
+
+            <label for="fees">Emp Designation:</label>
+            <input type="text" id="desig" name="desig" [(ngModel)]="employeedata.desig" /><br />
+
+            <label for="course">Emp Salary:</label>
+            <input type="text" id="salary" name="salary" [(ngModel)]="employeedata.salary" /><br />
+
+            <button type="submit" value="Submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
